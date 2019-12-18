@@ -49,6 +49,30 @@
                     <mainClass>com.afpa.gestionclientafpa.GestionCli</mainClass>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <id>shade</id>
+                    </execution>
+                </executions>
+                <configuration>
+                        <shadedArtifactAttached>true</shadedArtifactAttached>
+                        <shadedClassifierName>project-classifier</shadedClassifierName>
+                        <outputFile>shade\${project.artifactId}.jar</outputFile>
+                        <transformers>
+                            <transformer implementation=
+                                                 "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <mainClass>com.mycompany.crud_proj.Launcher</mainClass>
+                            </transformer>
+                        </transformers>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
