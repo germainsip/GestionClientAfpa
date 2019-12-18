@@ -68,7 +68,7 @@
                         <transformers>
                             <transformer implementation=
                                                  "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                <mainClass>com.mycompany.crud_proj.Launcher</mainClass>
+                                <mainClass>com.afpa.gestionclientafpa.Launcher</mainClass>
                             </transformer>
                         </transformers>
                 </configuration>
